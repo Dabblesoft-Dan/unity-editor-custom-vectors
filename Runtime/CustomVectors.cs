@@ -660,9 +660,9 @@ namespace Dabblesoft.Unity.Editor.CustomVectors
             if (subLabels.Length != values.Length)
             {
                 if (subLabels.Length < values.Length) 
-                    Debug.LogError("CustomVectors MultiFloatField has fewer subLabels than values assigned to it.");
+                    Debug.LogError("CustomVectors MultiIntField has fewer subLabels than values assigned to it.");
                 else 
-                    Debug.LogError("CustomVectors MultiFloatField has more subLabels than values assigned to it.");
+                    Debug.LogError("CustomVectors MultiIntField has more subLabels than values assigned to it.");
 
                 return;
             }
