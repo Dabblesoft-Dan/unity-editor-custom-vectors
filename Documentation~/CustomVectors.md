@@ -22,7 +22,7 @@ To install this package using Unity's Package Manager follow these steps:
 
 3. Enter the Git URL in the text box and click Add. [More Info](https://docs.unity3d.com/Manual/upm-ui-giturl.html)
 
-   Git URL: https://github.com/Dabblesoft-Dan/unity-editor-custom-vector.git
+   Git URL: https://github.com/Dabblesoft-Dan/unity-editor-custom-vectors.git
 
    ![Enter the Git URL in the text box and click Add.](https://docs.unity3d.com/uploads/Main/PackageManagerUI-GitURLPackageButton-Add.png)
 
