@@ -94,6 +94,92 @@ Tip: If you only want to pass in specific arguements then define it with the par
 EditorGUILayoutCV.Vector2Field("MyCustomVector2Name", myV2.vector2Value, xLabel: "MyCustomXLabel", expandWidth: true);
 ```
 
+# Property Attributes
+
+This is a list of the Custom Vectors property attributes, their parameters with default values, and the Vector types they are associated with.
+
+* Vector2/Vector2Int
+
+```csharp
+[CustomVector2(string label = "", string xLabel = "X", string yLabel = "Y", bool expandWidth = false)]
+```
+
+* Vector3/Vector3Int
+
+```csharp
+[CustomVector3(string label = "", string xLabel = "X", string yLabel = "Y", string zLabel = "Z")]
+```
+
+* Vector4
+
+```csharp
+[CustomVector4(string label = "", string xLabel = "X", string yLabel = "Y", string zLabel = "Z", string wLabel = "W")]
+[CustomVector4Inline(string label = "", string xLabel = "X", string yLabel = "Y", string zLabel = "Z", string wLabel = "W", bool expandWidth = true)]
+[CustomVector4Stacked(string label = "", string xLabel = "X", string yLabel = "Y", string zLabel = "Z", string wLabel = "W", bool expandWidth = true)]
+```
+
+# Editor GUI Fields
+
+This is a list of the Custom Vectors Editor GUI fields and their parameters with default values.
+
+## GUI
+
+* Vector2
+
+```csharp
+Vector2Field(Rect position, string label, Vector2 value, string xLabel = "X", string yLabel = "Y", bool expandWidth = false);
+Vector2IntField(Rect position, string label, Vector2Int value, string xLabel = "X", string yLabel = "Y", bool expandWidth = false);
+```
+
+* Vector3
+
+```csharp
+Vector3Field(Rect position, string label, Vector3 value, string xLabel = "X", string yLabel = "Y", string zLabel = "Z");
+Vector3IntField(Rect position, string label, Vector3Int value, string xLabel = "X", string yLabel = "Y", string zLabel = "Z");
+```
+
+* Vector4
+
+```csharp
+Vector4Field(Rect position, string label, Vector4 value, string xLabel = "X", string yLabel = "Y", string zLabel = "Z", string wLabel = "W", bool expandWidth = true, bool stackFields = false);
+```
+
+* Multi
+
+```csharp
+MultiFloatField(Rect position, string label, string[] subLabels, float[] values, int columns = 3, bool expandWidth = false);
+MultiIntField(Rect position, string label, string[] subLabels, int[] values, int columns = 3, bool expandWidth = false);
+```
+
+## GUI Layout
+
+* Vector2
+
+```csharp
+Vector2Field(string label, Vector2 value, string xLabel = "X", string yLabel = "Y", bool expandWidth = false, params GUILayoutOption[] options);
+Vector2IntField(string label, Vector2Int value, string xLabel = "X", string yLabel = "Y", bool expandWidth = false, params GUILayoutOption[] options);
+```
+
+* Vector3
+
+```csharp
+Vector3Field(string label, Vector3 value, string xLabel = "X", string yLabel = "Y", string zLabel = "Z", params GUILayoutOption[] options);
+Vector3IntField(string label, Vector3Int value, string xLabel = "X", string yLabel = "Y", string zLabel = "Z", params GUILayoutOption[] options);
+```
+
+* Vector4
+
+```csharp
+Vector4Field(string label, Vector4 value, string xLabel = "X", string yLabel = "Y", string zLabel = "Z", string wLabel = "W", bool expandWidth = true, bool stackFields = false, params GUILayoutOption[] options);
+```
+
+* Multi
+
+```csharp
+MultiFloatField(string label, string[] subLabels, float[] values, int columns = 3, bool expandWidth = false, params GUILayoutOption[] options);
+MultiIntField(string label, string[] subLabels, int[] values, int columns = 3, bool expandWidth = false, params GUILayoutOption[] options);
+````
+
 # Technical details
 ## Requirements
 

@@ -1,10 +1,4 @@
-# MyPackage LICENSE Example
-
-*Below is an example of the type of info you might include in your package's LICENSE file:*
-
-MIT License
-
-Copyright (c) 2021 MyCompany
+Copyright (c) 2021 Dabblesoft
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

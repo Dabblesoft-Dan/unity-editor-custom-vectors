@@ -1,7 +1,7 @@
 {
-    "name": "MyCompany.MyPackage.Editor",
+    "name": "Dabblesoft.CustomVectors.Editor",
     "references": [
-        "MyCompany.MyPackage"
+        "Dabblesoft.CustomVectors"
     ],
     "includePlatforms": [
         "Editor"

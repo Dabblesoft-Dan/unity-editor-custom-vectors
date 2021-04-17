@@ -1,26 +1,26 @@
 {
-    "name": "com.mycompany.mypackage",
-    "version": "1.2.3",
-    "displayName": "MyPackage",
-    "description": "This is an example package.",
+    "name": "com.dabblesoft.custom-vectors",
+    "version": "1.0.0",
+    "displayName": "Custom Vectors",
+    "description": "Custom Vectors provides you with various Vector property attributes and custom Editor GUI Vector fields for Unity.",
     "unity": "2019.1",
     "unityRelease": "0b5",
-    "dependencies": {
-        "com.unity.test-framework": "1.1.20"
-    },
     "keywords": [
-        "keyword1",
-        "keyword2",
-        "keyword3"
+        "unity",
+        "editor",
+        "vector",
+		"gui",
+        "attribute",
+        "drawer"
     ],
     "author": {
-        "name": "MyCompany",
-        "email": "me@mycompany.com",
-        "url": "https://www.mycompany.com"
+        "name": "Dabblesoft",
+        "email": "dan@dabblesoft.com",
+        "url": "https://www.dabblesoft.com"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/myusername/unity-package-template.git",
-        "revision": "0123456789"
+        "url": "https://github.com/Dabblesoft-Dan/unity-editor-custom-vectors.git",
+        "revision": "1"
     }
 }
