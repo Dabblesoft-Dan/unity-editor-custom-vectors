@@ -1,10 +1,10 @@
 # Custom Vectors
 
-Custom Vectors provides you with various Vector property attributes and custom Editor GUI Vector fields for use in the Unity Editor.
+Custom Vectors provides you with various Vector [property attributes](#property-attribute-setup) and custom [Editor GUI Vector fields](#editor-gui-field-setup) for use in the Unity Editor.
 
 # About
 
-Custom Vectors will grant you more flexibility for displaying Vector fields in the Unity Editor. This includes property attributes that can be used to change the prefix label, sub-labels, and field styling. There are also Custom Vectors fields that can be used in a custom editor to create Editor GUI Vector fields that better represent your intended usage. Lastly, Custom Vectors also has an enhanced version of the MultiFloatField and MultiIntField that allows you additional customization and formatting.
+Custom Vectors will grant you more flexibility for displaying Vector fields in the Unity Editor. This includes [property attributes](#property-attribute-setup) that can be used to change the prefix label, sub-labels, and field styling. There are also Custom Vectors fields that can be used in a custom editor to create [Editor GUI Vector fields](#editor-gui-field-setup) that better represent your intended usage. Lastly, Custom Vectors also has an enhanced version of the MultiFloatField and MultiIntField that allows you additional customization and formatting.
 
 Note: This does NOT change the underlying structure of a Vector. The variables X, Y, Z, etc will remain the same when accessing the Vector itself. Custom Vectors only changes how a Vector is displayed in the Unity Editor.
 
