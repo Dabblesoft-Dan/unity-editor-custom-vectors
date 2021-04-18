@@ -37,6 +37,8 @@ Note: If you want to edit these scripts be sure to make a copy of them into your
 
 ## Property Attribute Setup
 
+![Custom Vectors Property Attributes Examples](Runtime/Examples/Images/CustomVectorsPropertyAttributesExamples.png)
+
 To use Custom Vectors as a property attribute follow these steps:
 
 1. Add the Custom Vectors namespace to the top of your script:
@@ -64,6 +66,8 @@ Tip: If you only want to pass in specific arguements then define it with the par
 ```
 
 ## Editor GUI Field Setup
+
+![Custom Vectors Custom Editor Examples](Runtime/Examples/Images/CustomVectorsCustomEditorExamples.png)
 
 To use Custom Vectors as a Editor GUI field follow these steps:
 
