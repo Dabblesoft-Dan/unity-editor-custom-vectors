@@ -55,7 +55,9 @@ public class CustomVectorsCustomEditorExamplesEditor : Editor
 
         // Create a Custom Vector2 or Vector2Int field.
         float v2Height = EditorGUI.GetPropertyHeight(SerializedPropertyType.Vector2, new GUIContent());
-        v2Height = EditorGUIUtility.wideMode ? v2Height : v2Height + EditorGUIUtility.singleLineHeight;
+
+        if (!EditorGUIUtility.wideMode) v2Height += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
+
         Rect v2Rect = EditorGUILayout.GetControlRect(true, v2Height, EditorStyles.numberField);
 
         customV2.vector2Value = EditorGUICV.Vector2Field(v2Rect, "CustomVector2", customV2.vector2Value, "xLabel", "yLabel");
@@ -71,7 +73,9 @@ public class CustomVectorsCustomEditorExamplesEditor : Editor
 
         // Create a Custom Vector3 or Vector3Int field.
         float v3Height = EditorGUI.GetPropertyHeight(SerializedPropertyType.Vector3, new GUIContent());
-        v3Height = EditorGUIUtility.wideMode ? v3Height : v3Height + EditorGUIUtility.singleLineHeight;
+
+        if (!EditorGUIUtility.wideMode) v3Height += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
+
         Rect v3Rect = EditorGUILayout.GetControlRect(true, v3Height, EditorStyles.numberField);
 
         customV3.vector3Value = EditorGUICV.Vector3Field(v3Rect, "CustomVector3", customV3.vector3Value, "xLabel", "yLabel", "zLabel");
@@ -85,7 +89,9 @@ public class CustomVectorsCustomEditorExamplesEditor : Editor
 
         // Create a Custom Vector4 field.
         float v4Height = EditorGUI.GetPropertyHeight(SerializedPropertyType.Vector4, new GUIContent());
-        v4Height = EditorGUIUtility.wideMode ? v4Height : v4Height + EditorGUIUtility.singleLineHeight;
+
+        if (!EditorGUIUtility.wideMode) v4Height += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
+
         Rect v4Rect = EditorGUILayout.GetControlRect(true, v4Height, EditorStyles.numberField);
 
         customV4.vector4Value = EditorGUICV.Vector4Field(v4Rect, "CustomVector4", customV4.vector4Value, "xLabel", "yLabel", "zLabel", "wLabel", false);
@@ -96,7 +102,11 @@ public class CustomVectorsCustomEditorExamplesEditor : Editor
 
         // Create a Custom Vector4 field that displays as stacked fields.
         float v4StackedHeight = EditorGUI.GetPropertyHeight(SerializedPropertyType.Vector4, new GUIContent()) * 2;
-        v4StackedHeight = EditorGUIUtility.wideMode ? v4StackedHeight : v4StackedHeight + EditorGUIUtility.singleLineHeight;
+
+        v4StackedHeight = EditorGUIUtility.wideMode ?
+            v4StackedHeight + EditorGUIUtility.standardVerticalSpacing :
+            v4StackedHeight + EditorGUIUtility.singleLineHeight + (EditorGUIUtility.standardVerticalSpacing * 2);
+
         Rect v4StackedRect = EditorGUILayout.GetControlRect(true, v4StackedHeight, EditorStyles.numberField);
 
         customV4Stacked.vector4Value = EditorGUICV.Vector4Field(v4StackedRect, "CustomVector4Stacked", customV4Stacked.vector4Value, "xLabel", "yLabel", "zLabel", "wLabel", false, true);
@@ -119,9 +129,14 @@ public class CustomVectorsCustomEditorExamplesEditor : Editor
         };
 
         int columns = 5;
+        int rows = 2;
 
-        float mfHeight = EditorGUI.GetPropertyHeight(SerializedPropertyType.Vector3, new GUIContent()) * 2;
-        mfHeight = EditorGUIUtility.wideMode ? mfHeight : mfHeight + EditorGUIUtility.singleLineHeight;
+        float mfHeight = EditorGUI.GetPropertyHeight(SerializedPropertyType.Vector3, new GUIContent()) * rows;
+
+        mfHeight = EditorGUIUtility.wideMode ?
+            mfHeight + (EditorGUIUtility.standardVerticalSpacing * (rows - 1)) :
+            mfHeight + EditorGUIUtility.singleLineHeight + (EditorGUIUtility.standardVerticalSpacing * rows);
+
         Rect mfRect = EditorGUILayout.GetControlRect(true, mfHeight, EditorStyles.numberField);
 
         var multiValues = new float[customMulti.arraySize];
@@ -253,7 +268,7 @@ public class CustomVectorsCustomEditorExamples : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

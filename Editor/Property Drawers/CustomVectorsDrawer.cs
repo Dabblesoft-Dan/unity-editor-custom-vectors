@@ -1,6 +1,8 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
+using EditorGUIUnity = UnityEditor.EditorGUI;
+
 namespace Dabblesoft.Unity.Editor.CustomVectors
 {
     static class CustomVectorUtils
@@ -12,7 +14,7 @@ namespace Dabblesoft.Unity.Editor.CustomVectors
             int attributeIndex = customVectorTypeName.IndexOf(attributeText);
             string customVectorName = customVectorTypeName.Remove(attributeIndex);
 
-            UnityEditor.EditorGUI.LabelField(position, label.text, "Use " + customVectorName + " with " + compatibleTypes + ".");
+            EditorGUIUnity.LabelField(position, label.text, "Use " + customVectorName + " with " + compatibleTypes + ".");
         }
 
         internal static GUIContent GetLabel(GUIContent label, string customLabel)
@@ -145,12 +147,12 @@ namespace Dabblesoft.Unity.Editor.CustomVectors
 
                 float fieldHeight = EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
                 int rows = EditorGUIUtility.wideMode ? 1 : 2;
-                float foldoutFieldsHeight = UnityEditor.EditorGUI.GetPropertyHeight(property) - (fieldHeight * rows);
+                float foldoutFieldsHeight = EditorGUIUnity.GetPropertyHeight(property) - (fieldHeight * rows);
 
                 Rect foldoutPos = position;
                 foldoutPos.y -= foldoutFieldsHeight / 2;
 
-                property.isExpanded = UnityEditor.EditorGUI.Foldout(foldoutPos, property.isExpanded, foldoutLabel);
+                property.isExpanded = EditorGUIUnity.Foldout(foldoutPos, property.isExpanded, foldoutLabel);
 
                 if (property.isExpanded)
                 {
@@ -174,20 +176,20 @@ namespace Dabblesoft.Unity.Editor.CustomVectors
                     position.y += EditorGUIUtility.standardVerticalSpacing + spacing;
                     position.height = EditorGUIUtility.singleLineHeight;
 
-                    using (var check = new UnityEditor.EditorGUI.ChangeCheckScope())
+                    using (var check = new EditorGUIUnity.ChangeCheckScope())
                     {
                         float oldLabelWidth = EditorGUIUtility.labelWidth;
-                        int oldIndentLevel = UnityEditor.EditorGUI.indentLevel;
-                        UnityEditor.EditorGUI.indentLevel = 1;
+                        int oldIndentLevel = EditorGUIUnity.indentLevel;
+                        EditorGUIUnity.indentLevel = 1;
 
                         for (int i = 0; i < values.Length; i++)
                         {
                             position.y += fieldHeight;
-                            values[i] = UnityEditor.EditorGUI.FloatField(position, subLabels[i], values[i]);
+                            values[i] = EditorGUIUnity.FloatField(position, subLabels[i], values[i]);
                         }
 
                         EditorGUIUtility.labelWidth = oldLabelWidth;
-                        UnityEditor.EditorGUI.indentLevel = oldIndentLevel;
+                        EditorGUIUnity.indentLevel = oldIndentLevel;
 
                         if (check.changed)
                         {
