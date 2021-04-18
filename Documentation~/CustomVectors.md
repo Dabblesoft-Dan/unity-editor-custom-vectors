@@ -31,7 +31,7 @@ If Unity was not able to install the package, the Unity Console displays an erro
 
 # Usage
 
-First, it is recommended that you open go to the [Examples folder](Runtime/Examples/) and look over the example scripts. These scripts have detailed examples in them and provide a reference for setting things up.
+First, it is recommended that you go to the [Examples folder](Runtime/Examples/) and look over the example scripts. These scripts have detailed examples in them and provide a reference for setting things up.
 
 Note: If you want to edit these scripts be sure to make a copy of them into your Assets folder first and apply your edits there. You may need to change the script names as well.
 
