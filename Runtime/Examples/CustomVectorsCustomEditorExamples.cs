@@ -53,6 +53,8 @@ public class CustomVectorsCustomEditorExamplesEditor : Editor
     {
         serializedObject.Update();
 
+        EditorGUILayout.LabelField("Vector2 Examples", EditorStyles.boldLabel);
+
         // Create a Custom Vector2 or Vector2Int field.
         float v2Height = EditorGUI.GetPropertyHeight(SerializedPropertyType.Vector2, new GUIContent());
 
@@ -60,16 +62,18 @@ public class CustomVectorsCustomEditorExamplesEditor : Editor
 
         Rect v2Rect = EditorGUILayout.GetControlRect(true, v2Height, EditorStyles.numberField);
 
-        customV2.vector2Value = EditorGUICV.Vector2Field(v2Rect, "CustomVector2", customV2.vector2Value, "xLabel", "yLabel");
-        customV2Layout.vector2Value = EditorGUILayoutCV.Vector2Field("CustomVector2Layout", customV2Layout.vector2Value, xLabel: "xLabel");
-        customVector2Expanded.vector2Value = EditorGUILayoutCV.Vector2Field("CustomVector2Layout Expanded", customVector2Expanded.vector2Value, xLabel: "xLabel", expandWidth: true);
+        customV2.vector2Value = EditorGUICV.Vector2Field(v2Rect, "CustomV2", customV2.vector2Value, "xLabel", "yLabel");
+        customV2Layout.vector2Value = EditorGUILayoutCV.Vector2Field("CustomV2Layout", customV2Layout.vector2Value, xLabel: "xLabel");
+        customVector2Expanded.vector2Value = EditorGUILayoutCV.Vector2Field("CustomV2Layout Expanded", customVector2Expanded.vector2Value, xLabel: "xLabel", expandWidth: true);
 
         // Can also be used with Vector2Int.
-        //customV2.vector2IntValue = EditorGUICV.Vector2IntField(v2Rect, "CustomVector2", customV2.vector2IntValue, "xLabel", "yLabel");
-        //customV2Layout.vector2IntValue = EditorGUILayoutCV.Vector2IntField("CustomVector2Layout", customV2Layout.vector2IntValue, xLabel: "xLabel");
-        //customVector2Expanded.vector2IntValue = EditorGUILayoutCV.Vector2IntField("CustomVector2Layout Expanded", customVector2Expanded.vector2IntValue, xLabel: "xLabel", expandWidth: true);
+        //customV2.vector2IntValue = EditorGUICV.Vector2IntField(v2Rect, "CustomV2", customV2.vector2IntValue, "xLabel", "yLabel");
+        //customV2Layout.vector2IntValue = EditorGUILayoutCV.Vector2IntField("CustomV2Layout", customV2Layout.vector2IntValue, xLabel: "xLabel");
+        //customVector2Expanded.vector2IntValue = EditorGUILayoutCV.Vector2IntField("CustomV2Layout Expanded", customVector2Expanded.vector2IntValue, xLabel: "xLabel", expandWidth: true);
 
-        EditorGUILayout.Space(20);
+        EditorGUILayout.Space();
+
+        EditorGUILayout.LabelField("Vector3 Examples", EditorStyles.boldLabel);
 
         // Create a Custom Vector3 or Vector3Int field.
         float v3Height = EditorGUI.GetPropertyHeight(SerializedPropertyType.Vector3, new GUIContent());
@@ -78,14 +82,16 @@ public class CustomVectorsCustomEditorExamplesEditor : Editor
 
         Rect v3Rect = EditorGUILayout.GetControlRect(true, v3Height, EditorStyles.numberField);
 
-        customV3.vector3Value = EditorGUICV.Vector3Field(v3Rect, "CustomVector3", customV3.vector3Value, "xLabel", "yLabel", "zLabel");
-        customV3Layout.vector3Value = EditorGUILayoutCV.Vector3Field("CustomVector3Layout", customV3Layout.vector3Value, xLabel: "xLabel", zLabel: "zLabel");
+        customV3.vector3Value = EditorGUICV.Vector3Field(v3Rect, "CustomV3", customV3.vector3Value, "xLabel", "yLabel", "zLabel");
+        customV3Layout.vector3Value = EditorGUILayoutCV.Vector3Field("CustomV3Layout", customV3Layout.vector3Value, xLabel: "xLabel", zLabel: "zLabel");
 
         // Can also be used with Vector3Int.
-        //customV3.vector3IntValue = EditorGUICV.Vector3IntField(v3Rect, "CustomVector3", customV3.vector3IntValue, "xLabel", "yLabel", "zLabel");
-        //customV3Layout.vector3IntValue = EditorGUILayoutCV.Vector3IntField("CustomVector3Layout", customV3Layout.vector3IntValue, xLabel: "xLabel", zLabel: "zLabel");
+        //customV3.vector3IntValue = EditorGUICV.Vector3IntField(v3Rect, "CustomV3", customV3.vector3IntValue, "xLabel", "yLabel", "zLabel");
+        //customV3Layout.vector3IntValue = EditorGUILayoutCV.Vector3IntField("CustomV3Layout", customV3Layout.vector3IntValue, xLabel: "xLabel", zLabel: "zLabel");
 
-        EditorGUILayout.Space(20);
+        EditorGUILayout.Space();
+
+        EditorGUILayout.LabelField("Vector4 Examples", EditorStyles.boldLabel);
 
         // Create a Custom Vector4 field.
         float v4Height = EditorGUI.GetPropertyHeight(SerializedPropertyType.Vector4, new GUIContent());
@@ -94,11 +100,13 @@ public class CustomVectorsCustomEditorExamplesEditor : Editor
 
         Rect v4Rect = EditorGUILayout.GetControlRect(true, v4Height, EditorStyles.numberField);
 
-        customV4.vector4Value = EditorGUICV.Vector4Field(v4Rect, "CustomVector4", customV4.vector4Value, "xLabel", "yLabel", "zLabel", "wLabel", false);
-        customV4Layout.vector4Value = EditorGUILayoutCV.Vector4Field("CustomVector4Layout", customV4Layout.vector4Value, xLabel: "xLabel", zLabel: "zLabel", expandWidth: false);
-        customVector4Expanded.vector4Value = EditorGUILayoutCV.Vector4Field("CustomVector4Layout Expanded", customVector4Expanded.vector4Value, xLabel: "xLabel", zLabel: "zLabel");
+        customV4.vector4Value = EditorGUICV.Vector4Field(v4Rect, "CustomV4", customV4.vector4Value, "xLabel", "yLabel", "zLabel", "wLabel", false);
+        customV4Layout.vector4Value = EditorGUILayoutCV.Vector4Field("CustomV4Layout", customV4Layout.vector4Value, xLabel: "xLabel", zLabel: "zLabel", expandWidth: false);
+        customVector4Expanded.vector4Value = EditorGUILayoutCV.Vector4Field("CustomV4Layout Expanded", customVector4Expanded.vector4Value, xLabel: "xLabel", zLabel: "zLabel");
 
-        EditorGUILayout.Space(20);
+        EditorGUILayout.Space();
+
+        EditorGUILayout.LabelField("Vector4Stacked Examples", EditorStyles.boldLabel);
 
         // Create a Custom Vector4 field that displays as stacked fields.
         float v4StackedHeight = EditorGUI.GetPropertyHeight(SerializedPropertyType.Vector4, new GUIContent()) * 2;
@@ -109,11 +117,13 @@ public class CustomVectorsCustomEditorExamplesEditor : Editor
 
         Rect v4StackedRect = EditorGUILayout.GetControlRect(true, v4StackedHeight, EditorStyles.numberField);
 
-        customV4Stacked.vector4Value = EditorGUICV.Vector4Field(v4StackedRect, "CustomVector4Stacked", customV4Stacked.vector4Value, "xLabel", "yLabel", "zLabel", "wLabel", false, true);
-        customV4StackedLayout.vector4Value = EditorGUILayoutCV.Vector4Field("CustomVector4StackedLayout", customV4StackedLayout.vector4Value, xLabel: "xLabel", zLabel: "zLabel", expandWidth: false, stackFields: true);
-        customVector4StackedExpanded.vector4Value = EditorGUILayoutCV.Vector4Field("CustomVector4StackedLayout Expanded", customVector4StackedExpanded.vector4Value, xLabel: "xLabel", zLabel: "zLabel", stackFields: true);
+        customV4Stacked.vector4Value = EditorGUICV.Vector4Field(v4StackedRect, "CustomV4Stacked", customV4Stacked.vector4Value, "xLabel", "yLabel", "zLabel", "wLabel", false, true);
+        customV4StackedLayout.vector4Value = EditorGUILayoutCV.Vector4Field("CustomV4StackedLayout", customV4StackedLayout.vector4Value, xLabel: "xLabel", zLabel: "zLabel", expandWidth: false, stackFields: true);
+        customVector4StackedExpanded.vector4Value = EditorGUILayoutCV.Vector4Field("CustomV4StackedLayout Expanded", customVector4StackedExpanded.vector4Value, xLabel: "xLabel", zLabel: "zLabel", stackFields: true);
 
-        EditorGUILayout.Space(20);
+        EditorGUILayout.Space();
+
+        EditorGUILayout.LabelField("Multi Examples", EditorStyles.boldLabel);
 
         // Create a Custom MultiFloat or MultiInt field.
         var subLabels = new string[]
@@ -146,7 +156,7 @@ public class CustomVectorsCustomEditorExamplesEditor : Editor
             multiValues[i] = customMulti.GetArrayElementAtIndex(i).floatValue;
         }
 
-        EditorGUICV.MultiFloatField(mfRect, "CustomVectors MultiFloat", subLabels, multiValues, columns);
+        EditorGUICV.MultiFloatField(mfRect, "CustomMultiFloat", subLabels, multiValues, columns);
 
         for (int i = 0; i < multiValues.Length; i++)
         {
@@ -160,7 +170,7 @@ public class CustomVectorsCustomEditorExamplesEditor : Editor
             multiLayoutValues[i] = customMultiLayout.GetArrayElementAtIndex(i).floatValue;
         }
 
-        EditorGUILayoutCV.MultiFloatField("CustomVectors MultiFloatLayout", subLabelsLayout, multiLayoutValues, columns);
+        EditorGUILayoutCV.MultiFloatField("CustomMultiFloatLayout", subLabelsLayout, multiLayoutValues, columns);
 
         for (int i = 0; i < multiLayoutValues.Length; i++)
         {
@@ -174,7 +184,7 @@ public class CustomVectorsCustomEditorExamplesEditor : Editor
             multiExpandedValues[i] = customMultiExpanded.GetArrayElementAtIndex(i).floatValue;
         }
 
-        EditorGUILayoutCV.MultiFloatField("CustomVectors MultiFloatLayout Expanded", subLabelsLayout, multiExpandedValues, columns, true);
+        EditorGUILayoutCV.MultiFloatField("CustomMultiFloatLayout Expanded", subLabelsLayout, multiExpandedValues, columns, true);
 
         for (int i = 0; i < multiExpandedValues.Length; i++)
         {

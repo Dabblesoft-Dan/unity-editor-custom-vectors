@@ -5,7 +5,8 @@ using Dabblesoft.Unity.Editor.CustomVectors;
 [ExecuteAlways]
 public class CustomVectorsPropertyAttributeExamples : MonoBehaviour
 {
-    [CustomVector2("CustomVector2 Label", "xLabel", "yLabel")]
+    [Header("Vector2 Examples")]
+    [CustomVector2("My CustomV2 Label", "xLabel", "yLabel")]
     public Vector2 customV2 = Vector2.one;
     //public Vector2Int customV2 = Vector2Int.one; // Can also be used with Vector2Int.
 
@@ -13,9 +14,8 @@ public class CustomVectorsPropertyAttributeExamples : MonoBehaviour
     public Vector2 customVector2Expanded = Vector2.one;
     //public Vector2Int customVector2Expanded = Vector2Int.one; // Can also be used with Vector2Int.
 
-    [Space(20)]
-
-    [CustomVector3("CustomVector3 Label", "xLabel", "yLabel", "zLabel")]
+    [Header("Vector3 Examples")]
+    [CustomVector3("My CustomV3 Label", "xLabel", "yLabel", "zLabel")]
     public Vector3 customV3 = Vector3.one;
     //public Vector3Int customV3 = Vector3Int.one;
 
@@ -23,25 +23,22 @@ public class CustomVectorsPropertyAttributeExamples : MonoBehaviour
     public Vector3 customVector3 = Vector3.one;
     //public Vector3Int customVector3 = Vector3Int.one; // Can also be used with Vector3Int.
 
-    [Space(20)]
-
-    [CustomVector4("CustomVector4 Label", "xLabel", "yLabel", "zLabel", "wLabel")]
+    [Header("Vector4 Examples")]
+    [CustomVector4("My CustomV4 Label", "xLabel", "yLabel", "zLabel", "wLabel")]
     public Vector4 customV4 = Vector4.one;
 
     [CustomVector4(xLabel: "xLabel", zLabel: "zLabel")]
     public Vector4 customVector4 = Vector4.one;
 
-    [Space(20)]
-
-    [CustomVector4Inline("CustomVector4Inline Label", "xLabel", "yLabel", "zLabel", "wLabel", false)]
+    [Header("Vector4Inline Examples")]
+    [CustomVector4Inline("My CustomV4Inline Label", "xLabel", "yLabel", "zLabel", "wLabel", false)]
     public Vector4 customV4Inline = Vector4.one;
 
     [CustomVector4Inline(xLabel: "xLabel", zLabel: "zLabel")]
     public Vector4 customVector4InlineExpanded = Vector4.one;
 
-    [Space(20)]
-
-    [CustomVector4Stacked("CustomVector4Stacked Label", "xLabel", "yLabel", "zLabel", "wLabel", false)]
+    [Header("Vector4Stacked Examples")]
+    [CustomVector4Stacked("My CustomV4Stacked Label", "xLabel", "yLabel", "zLabel", "wLabel", false)]
     public Vector4 customV4Stacked = Vector4.one;
 
     [CustomVector4Stacked(xLabel: "xLabel", zLabel: "zLabel")]
