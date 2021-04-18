@@ -2,14 +2,14 @@
     "name": "com.dabblesoft.custom-vectors",
     "version": "1.0.0",
     "displayName": "Custom Vectors",
-    "description": "Custom Vectors provides you with various Vector property attributes and custom Editor GUI Vector fields for Unity.",
+    "description": "Custom Vectors provides you with various Vector property attributes and custom Editor GUI Vector fields for use in the Unity Editor.",
     "unity": "2019.1",
     "unityRelease": "0b5",
     "keywords": [
         "unity",
         "editor",
         "vector",
-		"gui",
+	"gui",
         "attribute",
         "drawer"
     ],
